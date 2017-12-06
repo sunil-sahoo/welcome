@@ -1,173 +1,221 @@
 <!DOCTYPE html>
 <html>
+<link rel="icon" type="image/gif/png" href="./pics/dops.jpg">
 <title>W3.CSS Template</title>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 <link rel="stylesheet" href="https://www.w3schools.com/lib/w3-theme-black.css">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
+<head>
+  <!-- Script -->
+  <script>
+  // Get the Sidebar
+        var mySidebar = document.getElementById("mySidebar");
+        
+        // Get the DIV with overlay effect
+        var overlayBg = document.getElementById("myOverlay");
+        
+        // Toggle between showing and hiding the sidebar, and add overlay effect
+        function w3_open() {
+            if (mySidebar.style.display === 'block') {
+                mySidebar.style.display = 'none';
+                overlayBg.style.display = "none";
+            } else {
+                mySidebar.style.display = 'block';
+                overlayBg.style.display = "block";
+            }
+        }
+        
+        // Close the sidebar with the close button
+        function w3_close() {
+            mySidebar.style.display = "none";
+            overlayBg.style.display = "none";
+        }
+  </script>
+        
+  <!-- Topbar -->
+  <div class=" w3-large w3-card w3-blue" style=" position:fixed; width:100%; ">
+      <a class="w3-bar-item w3-button w3-left w3-hide-large w3-hover-white w3-large w3-theme-l1" href="javascript:void(0)" onclick="w3_open()"><i class="fa fa-bars"></i></a>
+      <a href="." class="w3-bar-item w3-hover-white w3-large w3-button"><i class="fa fa-home fa-fw"></i></a>
+      <b class="w3-bar-item">DevOps Tutorial</b>
+      <div class="w3-dropdown-hover">
+        <button class="w3-button w3-hover-white">CI</button>
+        <div class="w3-dropdown-content w3-bar-block w3-card-4" style="min-width:auto;">
+          <a href="./ci/git" class="w3-bar-item w3-hover-teal w3-button">Git</a>
+          <a href="./ci/github" class="w3-bar-item w3-hover-teal w3-button">Github</a>
+          <a href="./ci/jenkins" class="w3-bar-item w3-hover-teal w3-button">Jenkins</a>
+        </div>
+      </div>
+      <div class="w3-dropdown-hover">
+          <button class="w3-button w3-hover-white">CT</button>
+          <div class="w3-dropdown-content w3-bar-block w3-card-4" style="min-width:auto;">
+            <a href="./ct/selenium" class="w3-bar-item w3-hover-teal w3-button">Selenium</a>
+          </div>
+       </div>
+      <div class="w3-dropdown-hover">
+          <button class="w3-button w3-hover-white">CD</button>
+          <div class="w3-dropdown-content w3-bar-block w3-card-4" style="min-width:auto;">
+            <a href="./cd/docker" class="w3-bar-item w3-hover-teal w3-button">Docker</a>
+            <a href="./cd/ec2" class="w3-bar-item w3-hover-teal w3-button">EC2</a>
+            <a href="./cd/kubernetes" class="w3-bar-item w3-hover-teal w3-button">Kubernetes</a>
+          </div>
+       </div>
+       <div class="w3-dropdown-hover">
+          <button class="w3-button w3-hover-white">Manage</button>
+            <div class="w3-dropdown-content w3-bar-block w3-card-4" style="min-width:120px;">
+              <a href="./manage/chef" class="w3-bar-item w3-hover-teal w3-button">Chef</a>
+              <a href="./manage/puppet" class="w3-bar-item w3-hover-teal w3-button">Puppet</a>
+            </div>
+        </div>
+        <div class="w3-dropdown-hover">
+            <button class="w3-button w3-hover-white">CM</button>
+            <div class="w3-dropdown-content w3-bar-block w3-card-4" style="min-width:auto;">
+              <a href="./cm/nagios" class="w3-bar-item w3-hover-teal w3-button">nagios</a>
+              <a href="./cm/nagios" class="w3-bar-item w3-hover-teal w3-button">cloudwatch</a>
+            </div>
+         </div>
+        <div class="w3-dropdown-hover">
+            <button class="w3-button w3-hover-white">AWS</button>
+            <div class="w3-dropdown-content w3-bar-block w3-card-4" style="min-width:auto;">
+              <a href="./aws/arch" class="w3-bar-item w3-hover-teal w3-button">Solutions Architect</a>
+              <a href="./aws/sysops" class="w3-bar-item w3-hover-teal w3-button">SysOps Administrator</a>
+            </div>
+        </div>
+        <div class="w3-dropdown-hover">
+        <button class="w3-button w3-hover-white">Scripting</button>
+        <div class="w3-dropdown-content w3-bar-block w3-card-4" style="min-width:auto;">
+          <a href="./scripting/bash" class="w3-bar-item w3-hover-teal w3-button">Bash Scripting</a>
+        </div>
 
-<body >
-<!-- Topbar -->
-<div class="w3-top">
-  <div class="w3-bar  w3-top w3-left-align w3-large w3-blue">        
-    <a class="w3-bar-item w3-button w3-left w3-hide-large w3-hover-white w3-large w3-theme-l1" href="javascript:void(0)" onclick="w3_open()"><i class="fa fa-bars"></i></a>
-    <a href="." class="w3-bar-item w3-button w3-hover-white"><i class="fa fa-home"></i></a>
-    <a href="./ci/" class="w3-bar-item w3-button w3-hide-small w3-hover-white">CI</a>
-    <a href="./cd/" class="w3-bar-item w3-button w3-hide-small w3-hover-white">CD</a>
-    <a href="./cm/" class="w3-bar-item w3-button w3-hide-small w3-hover-white">CM</a>
-    <a href="./cloud/" class="w3-bar-item w3-button w3-hide-small w3-hover-white">Cloud</a>
-    <a href="./scripting/" class="w3-bar-item w3-button w3-hide-small w3-hover-white">Scripting</a>
-    
-    
-    <a href="./sunil-cv.html" class="w3-bar-item w3-button w3-right w3-hover-white"><i class="fa fa-user"></i></a> 
-    <b class="w3-bar-item w3-button w3-right w3-hover-blue">DevOps Tutorial</b>
-    
-    
-  </div>
-</div>
+        <!-- Add new section here -->
 
-<!-- Sidebar -->
-<div class="w3-sidebar w3-blue-grey w3-bar-block w3-collapse w3-card w3-animate-left" style="width:200px; top: 43px; bottom: 0px; height:auto;" id="mySidebar">
+        <!-- Add new section here -->
+      </div>
+    </div>
+
+
+  <!-- The Above code should not be changed, change if necessary after line 90 -->
+  <!-- The code below may change from page to page -->
+
+
+
+  <!-- Sidebar -->
+<div class="w3-sidebar w3-card w3-teal w3-bar-block w3-collapse w3-card w3-animate-left" style="width:200px; top: 43px; bottom: 0px; height:auto;" id="mySidebar">
   <button class="w3-bar-item w3-button w3-large w3-hide-large" onclick="w3_close()">Close &times;</button>
   <a href="./intro.html" class="w3-bar-item w3-hover-white w3-button">DevOps Introduction</a>
-  <b class="w3-bar-item">Continuous Integration</b>
-    <a href="./ci/github" class="w3-bar-item w3-small w3-hover-white w3-button">Github</a>
-    <a href="./ci/git" class="w3-bar-item w3-small w3-hover-white w3-button">Git</a>
-    <a href="./ci/jenkins" class="w3-bar-item w3-small w3-hover-white w3-button">Jenkins</a>
-  <b class="w3-bar-item">Continuous Deployment</b>
-    <a href="./cd/docker" class="w3-bar-item w3-small w3-hover-white w3-button">Docker</a>
-    <a href="./cd/swarm" class="w3-bar-item w3-small w3-hover-white w3-button">Docker Swarm</a>
-    <a href="./cd/kubernetes" class="w3-bar-item w3-small w3-hover-white w3-button">Kubernetes</a>
-    <a href="./cd/ecs" class="w3-bar-item w3-small w3-hover-white w3-button">ECS</a>
+
     
-  <b class="w3-bar-item">Configuration Management</b>
-    <a href="./cm/puppet" class="w3-bar-item w3-small w3-hover-white w3-button">Puppet</a>
-    <a href="./cm/chef" class="w3-bar-item w3-small w3-hover-white w3-button">Chef</a>
- 
-  <b class="w3-bar-item">Cloud Deployment</b>
-    <a href="./cloud/aws" class="w3-bar-item w3-small w3-hover-white w3-button">AWS</a>
-    <a href="./cloud/google" class="w3-bar-item w3-small w3-hover-white w3-button">Google Cloud</a>
-  <b class="w3-bar-item">Scripting</b>
-    <a href="./scripting/bash" class="w3-bar-item w3-small w3-hover-white w3-button">Shell</a>
-    
-  </div>
+    <div class="w3-container w3-card">
+        <p class="w3-small"><b>Continuous Integration</b></p>
+        <a href="./code/github" class="w3-bar-item w3-small w3-hover-white w3-button">Github</a>
+        <a href="./code/git" class="w3-bar-item w3-small w3-hover-white w3-button">Git</a>
+        <a href="./code/jenkins" class="w3-bar-item w3-small w3-hover-white w3-button">Jenkins</a>
+    </div>
+    <div class="w3-container w3-card">
+        <p class="w3-small"><b>Continuous Testing</b></p>
+        <a href="./test/selenium" class="w3-bar-item w3-small w3-hover-white w3-button">Selenium</a>
+    </div>
+    <div class="w3-container w3-card">
+        <p class="w3-small"><b>Continuous Deployment</b></p>
+        <a href="./deploy/docker" class="w3-bar-item w3-small w3-hover-white w3-button">Docker</a>
+        <a href="./deploy/ec2" class="w3-bar-item w3-small w3-hover-white w3-button">EC2</a>
+        <a href="./deploy/kubernetes" class="w3-bar-item w3-small w3-hover-white w3-button">Kubernetes</a>
+    </div>
+    <div class="w3-container w3-card">
+        <p class="w3-small"><b>Config Management</b></p>
+        <a href="./manage/puppet" class="w3-bar-item w3-small w3-hover-white w3-button">Puppet</a>
+        <a href="./manage/chef" class="w3-bar-item w3-small w3-hover-white w3-button">Chef</a>
+    </div>
+    <div class="w3-container w3-card">
+        <p class="w3-small"><b>Continuous Monitor</b></p>
+        <a href="./monitor/nagios" class="w3-bar-item w3-small w3-hover-white w3-button">Nagios</a>
+        <a href="./monitor/cloudwatchf" class="w3-bar-item w3-small w3-hover-white w3-button">Cloudwatch</a>
+    </div>
+
+    <div class="w3-container w3-card">
+        <p class="w3-small"><b>AWS</b></p> 
+        <a href="./cloud/aws" class="w3-bar-item w3-small w3-hover-white w3-button">Solutions Architect</a>
+        <a href="./cloud/sysops" class="w3-bar-item w3-small w3-hover-white w3-button">SysOps Administrator</a>
+      </div>
+    <div class="w3-container w3-card">
+        <p class="w3-small"><b>Scripting</b></p>
+        <a href="./scripting/bash" class="w3-bar-item w3-small w3-hover-white w3-button">Bash</a>
+    </div>  
+</div>
 
 
 <!-- Overlay effect when opening sidebar on small screens -->
 <div class="w3-overlay w3-hide-large" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
 
-<!-- Main content: shift it to the right by 250 pixels when the sidebar is visible -->
+<!-- Main content: shift it to the right by 200 pixels when the sidebar is visible -->
 <div class="w3-main" style="margin-left:200px">
-
+</head>
 
 <!-- COntent -->
+<body class="w3-light-grey">
+  <br><br>
 
+  <div class="w3-content w3-margin-top" style="max-width:1400px;">
+  <!-- The Grid -->
+    <div class="w3-row-padding">
+      
+      <div class="w3-row">
+        <div class="w3-container  w3-white w3-margin-bottom" id="intro">
+          <h1 class="w3-text-teal">
+         <center><b>DevOps Tutorial</b></center>
+           </h1>
+        </div>
+      </div>
 
-    <div class="w3-row ">
-    <div class="w3-threequarter	 w3-container w3-padding-64" id="intro">
-            <br><br><br><br><br><br><br><br>
-      <h1 class="w3-text-teal">Get Started</h1>
-      <p>Welcome! We are excited you want to learn how to use Docker.
-        
-        In this six-part tutorial, you will:
-        
-        Get set up and oriented, on this page.
-        Build and run your first app
-        Turn your app into a scaling service
-        Span your service across multiple machines
-        Add a visitor counter that persists data
-        Deploy your swarm to production
-        The application itself is very simple so that you are not too distracted by what the code is doing. After all, the value of Docker is in how it can build, ship, and run applications; it’s totally agnostic as to what your application actually does.
-        
-        Prerequisites
-        While we’ll define concepts along the way, it is good for you to understand what Docker is and why you would use Docker before we begin.
-        
-        We also need to assume you are familiar with a few concepts before we continue:
-        
-        IP Addresses and Ports
-        Virtual Machines
-        Editing configuration files
-        Basic familiarity with the ideas of code dependencies and building
-        Machine resource usage terms, like CPU percentages, RAM use in bytes, etc.
-        A brief explanation of containers
-        An image is a lightweight, stand-alone, executable package that includes everything needed to run a piece of software, including the code, a runtime, libraries, environment variables, and config files.
-        
-        A container is a runtime instance of an image—what the image becomes in memory when actually executed. It runs completely isolated from the host environment by default, only accessing host files and ports if configured to do so.
-        
-        Containers run apps natively on the host machine’s kernel. They have better performance characteristics than virtual machines that only get virtual access to host resources through a hypervisor. Containers can get native access, each one running in a discrete process, taking no more memory than any other executable.
-        
+ <!-- Middle Column -->
+      <div class="w3-threequarter	">
+      <div class="w3-container w3-card w3-white w3-margin-bottom">
+        <h1>Introduction</h1>
+        <p>
+            From Wikipedia :
+            DevOps (a clipped compound of "development" and "operations") is a software engineering culture and practice that aims at unifying software development (Dev) and software operation (Ops). The main characteristic of the DevOps movement is to strongly advocate automation and monitoring at all steps of software construction, from integration, testing, releasing to deployment and infrastructure management. DevOps aims at shorter development cycles, increased deployment frequency, more dependable releases, in close alignment with business objectives
+            
         </p>
-    </div>
+      </div>
 
-    <div class="w3-quarter	 w3-container">
-            <br><br><br><br><br><br><br><br>            
-      <p class="w3-border w3-padding-large w3-padding-32 w3-center">AD</p>
-      <p class="w3-border w3-padding-large w3-padding-64 w3-center">AD</p>
+      <!-- End Column -->
+      </div>
+      <div class="w3-quarter">
+          <div class="w3-container w3-card w3-white w3-margin-bottom">
+           <p>See also: DevOps toolchain
+              As DevOps is intended to be a cross-functional mode of working, rather than a single DevOps tool there are sets (or "toolchains") of multiple tools.[13] Such DevOps tools are expected to fit into one or more of these categories, reflective of key aspects of the development and delivery process:[14][15]
+              
+              Code — code development and review, source code management tools, code merging
+              Build — continuous integration tools, build status
+              Test — continuous testing tools that provide feedback on business risks
+              Package — artifact repository, application pre-deployment staging
+              Release — change management, release approvals, release automation
+              Configure — infrastructure configuration and management, Infrastructure as Code tools
+              Monitor — applications performance monitoring, end–user experience
+              Some categories are more essential in a DevOps toolchain than others; especially continuous integration (e.g. Jenkins) and infrastructure as code (e.g. Puppet).[16][17]
+              
+              </p>
+          </div>
+      </div>
+      </div>
+
     </div>
   </div>
-
-
   <!-- Content End -->
 
 
-  <footer id="myFooter">
-    <div class="w3-container w3-theme-l2 w3-padding-64">
-      <h4>Footer</h4>
-    </div>
-
-    <div class="w3-container w3-theme-l1">
-      <p>Powered by <a href="https://www.w3schools.com/w3css/default.asp" target="_blank">w3.css</a></p>
-    </div>
-  </footer>
-
 <!-- END MAIN -->
-</div>
 
-
-  <script>
-    window.onscroll = function() {myFunction()};
-    
-    var navbar = document.getElementById("navbar");
-    var sticky = navbar.offsetTop;
-    
-    function myFunction() {
-      if (window.pageYOffset >= sticky) {
-        navbar.classList.add("sticky")
-      } else {
-        navbar.classList.remove("sticky");
-      }
-    }
-    </script>
-
-
-
-<script>
-// Get the Sidebar
-var mySidebar = document.getElementById("mySidebar");
-
-// Get the DIV with overlay effect
-var overlayBg = document.getElementById("myOverlay");
-
-// Toggle between showing and hiding the sidebar, and add overlay effect
-function w3_open() {
-    if (mySidebar.style.display === 'block') {
-        mySidebar.style.display = 'none';
-        overlayBg.style.display = "none";
-    } else {
-        mySidebar.style.display = 'block';
-        overlayBg.style.display = "block";
-    }
-}
-
-// Close the sidebar with the close button
-function w3_close() {
-    mySidebar.style.display = "none";
-    overlayBg.style.display = "none";
-}
-</script>
-
+<footer class="w3-container w3-black w3-center w3-margin-top" style="margin-left:200px">
+    <p>Find me on social media.</p>
+    <a href="google.com"> <i class="fa fa-linkedin w3-hover-opacity"></i></a>
+    <a href="google.com"> <i class="fa fa-github w3-hover-opacity"></i></a>
+    <a href="google.com"> <i class="fa fa-facebook-official w3-hover-opacity"></i></a> 
+    <a href="google.com"> <i class="fa fa-instagram w3-hover-opacity"></i></a>
+    <p>Powered by <a href="https://www.w3schools.com/w3css/default.asp" target="_blank">w3.css</a></p>
+  </footer>
+  
 </body>
 </html>
